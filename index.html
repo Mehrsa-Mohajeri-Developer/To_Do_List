@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List</title>
+    <link rel="stylesheet" href="output.css">
+    <link rel="stylesheet" href="BootStrap/Icons/bootstrap-icons.min.css">
+</head>
+
+<body class="bg-[#d94166] px-3 mt-6">
+    <div class="bg-white w-[90%] border-[6px] border-[#50514f] relative flex justify-center mx-auto">
+        <span class="w-[30px] h-[3px] bg-[#50514f] rotate-45 absolute -left-2 top-8"></span>
+        <span class="w-[16px] h-[3px] bg-[#50514f] rotate-45 absolute -left-[4px] top-[37px]"></span>
+        <span class="w-[36px] h-[3px] bg-[#50514f] rotate-45 absolute -left-[7px] top-[28px]"></span>
+        <div onload="day()" class="w-[80%] py-1 day text-center text-[#50514f] font-black font-lato text-2xl">
+        </div>
+    </div>
+    <div class="w-[90%] border-[6px] border-[#50514f] mx-auto mt-6">
+        <div class="bg-[#f8c600] py-3 border-b-[6px] border-[#50514f]">
+            <ul class="flex flex-wrap justify-between px-16 font-lato text-[#50514f] font-black text-xl">
+                <li class="btn1 w-fit cursor-pointer hover:scale-[1.1] duration-300">ALL</li>
+                <li class="btn2 w-fit cursor-pointer hover:scale-[1.1] duration-300">PENDING</li>
+                <li class="btn3 w-fit cursor-pointer hover:scale-[1.1] duration-300">DONE</li>
+            </ul>
+        </div>
+        <div class="relative w-full bg-white h-[400px] flex flex-wrap justify-center items-center">
+            <ul id="all"
+                class="w-[90%] border-[6px] border-[#50514f] flex flex-wrap justify-center content-center absolute h-[300px] overflow-scroll z-20">
+            </ul>
+            <ul id="pending"
+                class="w-[90%] border-[6px] border-[#50514f] flex flex-wrap justify-center content-center absolute h-[300px] overflow-scroll opacity-0">
+            </ul>
+            <ul id="done"
+                class="w-[90%] border-[6px] border-[#50514f] flex flex-wrap justify-center content-center absolute h-[300px] overflow-scroll opacity-0">
+            </ul>
+        </div>
+        <div class="bg-[#357dc5] border-t-[6px] border-[#50514f] p-3 flex justify-evenly">
+            <input id="inp" type="text" placeholder="Do something?"
+                class="placeholder:text-[#50514f] p-2 focus:outline-none focus:ring-1 focus:ring-[#eceff1] border-[6px] border-[#50514f] font-lato text-[#50514f] text-xl bg-inherit" />
+            <button id="submit"
+                class="border-[6px] border-[#50514f] p-2 text-[#50514f] font-black font-lato text-xl">Submit</button>
+        </div>
+    </div>
+</body>
+<script src="master.js"></script>
+
+</html>
